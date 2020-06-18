@@ -1,0 +1,66 @@
+<html>
+<head>
+
+<script src="j1.js"></script>
+
+
+</head>
+<body>
+
+<script>
+var x=prompt("give the no ");
+
+if(x!=null)
+{
+for(i=0;i<=10;i++)
+{
+   document.write("<br>"+x+"*"+i+"="+x*i);
+   }
+   }
+</script>
+<script>
+function mydetails(a,b)
+{
+return a+b;
+
+}
+</script>
+<script>
+function effect()
+{
+var x=document.getElementById("par1");
+x.style.backgroundColor="lightblue";
+}
+function effectback()
+{
+var x=document.getElementById("par1");
+x.style.backgroundColor="white"
+}
+
+
+</script>
+
+
+<h1>GOOD MORNING ARNAB</h1>
+<p id="par1" onmouseover="effect()" onmouseout="effectback()">know about arnab</p>
+<img width=20% height=30% border="8px" alt="khjgf" src="baba.jpeg" class="center"/>
+<a href="https://www.facebook.com/asoka.das.90"> click here to go arnab's facebook </a>
+
+<ul>
+<li>good boy</li>
+<li>but fattu</li>
+<li>brother:ayan</li>
+<li>relationship:engaged with ankita</li>
+<li>MSC(cse)</li>
+<li>MIDNAPUR COLLAGE</li>
+</ul>
+<script>
+function run()
+{
+document.write(mydetails(2,3));
+} 
+</script>
+<input type="submit" onclick="run()" value="submit"/>
+
+</body>
+</html>

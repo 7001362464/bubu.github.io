@@ -1,0 +1,24 @@
+<html>
+<body>
+<script type="text/javascript">
+    function test(){
+    var av=document.getElementById("hj").value;
+    if(av.lastIndexOf(".")!=av.length-4 || av.indexOf("@")!=av.length-10)
+	 {
+	 alert("you have given wrong mail");
+	 return false;
+    }
+	else
+	{
+	return true;
+	}
+	}
+    </script>
+<form action="jh.py" onsubmit="return test()">
+
+    email id<input id="hj" type="text" value="" >
+    <input type="submit"/> 
+</form>
+	
+</body>
+</html>
