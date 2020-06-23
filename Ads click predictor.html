@@ -1,0 +1,432 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:Arial,serif;font-size:8.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_002{font-family:Arial,serif;font-size:8.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_003{font-family:Arial,serif;font-size:10.5px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:Arial,serif;font-size:10.5px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-family:Arial,serif;font-size:16.4px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_004{font-family:Arial,serif;font-size:16.4px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_005{font-family:"Consolas",serif;font-size:10.5px;color:rgb(47,63,158);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_005{font-family:"Consolas",serif;font-size:10.5px;color:rgb(47,63,158);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_006{font-family:"Consolas",serif;font-size:10.5px;color:rgb(0,128,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_006{font-family:"Consolas",serif;font-size:10.5px;color:rgb(0,128,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:"Consolas",serif;font-size:10.5px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_007{font-family:"Consolas",serif;font-size:10.5px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_008{font-family:"Consolas",serif;font-size:10.5px;color:rgb(114,22,171);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_008{font-family:"Consolas",serif;font-size:10.5px;color:rgb(114,22,171);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_009{font-family:"Consolas",serif;font-size:10.5px;color:rgb(185,32,32);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_009{font-family:"Consolas",serif;font-size:10.5px;color:rgb(185,32,32);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_010{font-family:"Consolas",serif;font-size:10.5px;color:rgb(216,66,21);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_010{font-family:"Consolas",serif;font-size:10.5px;color:rgb(216,66,21);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_011{font-family:Arial,serif;font-size:9.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_011{font-family:Arial,serif;font-size:9.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_012{font-family:"Consolas",serif;font-size:10.5px;color:rgb(0,135,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_012{font-family:"Consolas",serif;font-size:10.5px;color:rgb(0,135,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_013{font-family:Arial,serif;font-size:19.4px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_013{font-family:Arial,serif;font-size:19.4px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+<script type="text/javascript" src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/wz_jsgraphics.js"></script>
+</head>
+<body>
+<div style="position:absolute;left:50%;margin-left:-420px;top:0px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background01.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:43.59px;top:53.36px" class="cls_003"><span class="cls_003">In this project we will be working with a fake advertising data set, indicating whether or not a particular internet user clicked on an Advertisement on a company</span></div>
+<div style="position:absolute;left:43.59px;top:65.28px" class="cls_003"><span class="cls_003">website. We will try to create a model that will predict whether or not they will click on an ad based off the features of that user.</span></div>
+<div style="position:absolute;left:43.59px;top:87.62px" class="cls_003"><span class="cls_003">This data set contains the following features:</span></div>
+<div style="position:absolute;left:64.45px;top:109.97px" class="cls_003"><span class="cls_003">'Daily Time Spent on Site': consumer time on site in minutes</span></div>
+<div style="position:absolute;left:64.45px;top:121.88px" class="cls_003"><span class="cls_003">'Age': cutomer age in years</span></div>
+<div style="position:absolute;left:64.45px;top:133.80px" class="cls_003"><span class="cls_003">'Area Income': Avg. Income of geographical area of consumer</span></div>
+<div style="position:absolute;left:64.45px;top:145.72px" class="cls_003"><span class="cls_003">'Daily Internet Usage': Avg. minutes a day consumer is on the internet</span></div>
+<div style="position:absolute;left:64.45px;top:157.63px" class="cls_003"><span class="cls_003">'Ad Topic Line': Headline of the advertisement</span></div>
+<div style="position:absolute;left:64.45px;top:169.55px" class="cls_003"><span class="cls_003">'City': City of consumer</span></div>
+<div style="position:absolute;left:64.45px;top:181.47px" class="cls_003"><span class="cls_003">'Male': Whether or not consumer was male</span></div>
+<div style="position:absolute;left:64.45px;top:193.38px" class="cls_003"><span class="cls_003">'Country': Country of consumer</span></div>
+<div style="position:absolute;left:64.45px;top:205.30px" class="cls_003"><span class="cls_003">'Timestamp': Time at which consumer clicked on Ad or closed window</span></div>
+<div style="position:absolute;left:64.45px;top:217.21px" class="cls_003"><span class="cls_003">'Clicked on Ad': 0 or 1 indicated clicking on Ad</span></div>
+<div style="position:absolute;left:43.59px;top:247.76px" class="cls_004"><span class="cls_004">Import Libraries</span></div>
+<div style="position:absolute;left:43.59px;top:276.05px" class="cls_003"><span class="cls_003">Import a few libraries you think you'll need (Or just import them as you go along!)</span></div>
+<div style="position:absolute;left:66.08px;top:307.33px" class="cls_005"><span class="cls_005">In [97]:</span></div>
+<div style="position:absolute;left:119.82px;top:307.33px" class="cls_006"><span class="cls_006">import</span><span class="cls_007"> pandas </span><span class="cls_006">as</span><span class="cls_007"> pd</span></div>
+<div style="position:absolute;left:119.82px;top:319.99px" class="cls_006"><span class="cls_006">import</span><span class="cls_007"> numpy </span><span class="cls_006">as</span><span class="cls_007"> np</span></div>
+<div style="position:absolute;left:119.82px;top:332.66px" class="cls_006"><span class="cls_006">import</span><span class="cls_007"> matplotlib.pyplot </span><span class="cls_006">as</span><span class="cls_007"> plt</span></div>
+<div style="position:absolute;left:119.82px;top:345.32px" class="cls_006"><span class="cls_006">import</span><span class="cls_007"> seaborn </span><span class="cls_006">as</span><span class="cls_007"> sns</span></div>
+<div style="position:absolute;left:119.82px;top:357.98px" class="cls_008"><span class="cls_008">%</span><span class="cls_007">  t l tlib i li</span></div>
+<div style="position:absolute;left:120.26px;top:384.80px" class="cls_004"><span class="cls_004">Get the Data</span></div>
+<div style="position:absolute;left:120.26px;top:413.09px" class="cls_003"><span class="cls_003">Read in the advertising.csv file and set it to a data frame called ad_data.</span></div>
+<div style="position:absolute;left:66.08px;top:444.37px" class="cls_005"><span class="cls_005">In [98]:</span></div>
+<div style="position:absolute;left:125.55px;top:444.37px" class="cls_007"><span class="cls_007">d d t</span></div>
+<div style="position:absolute;left:182.85px;top:444.37px" class="cls_007"><span class="cls_007">d</span></div>
+<div style="position:absolute;left:211.50px;top:444.37px" class="cls_007"><span class="cls_007">d</span></div>
+<div style="position:absolute;left:240.17px;top:444.37px" class="cls_007"><span class="cls_007">(</span><span class="cls_009">' d    ti i</span></div>
+<div style="position:absolute;left:337.62px;top:444.37px" class="cls_009"><span class="cls_009">'</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:120.26px;top:474.91px" class="cls_003"><span class="cls_003">Check the head of ad_data</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">1/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:604px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background02.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [40]:</span></div>
+<div style="position:absolute;left:125.55px;top:36.98px" class="cls_007"><span class="cls_007">d</span></div>
+<div style="position:absolute;left:137.02px;top:36.98px" class="cls_007"><span class="cls_007">d t  h  d()</span></div>
+<div style="position:absolute;left:66.06px;top:57.83px" class="cls_010"><span class="cls_010">Out[40]:</span></div>
+<div style="position:absolute;left:143.74px;top:62.30px" class="cls_011"><span class="cls_011">Daily Time Spent on</span></div>
+<div style="position:absolute;left:290.31px;top:62.30px" class="cls_011"><span class="cls_011">Area</span></div>
+<div style="position:absolute;left:336.98px;top:62.30px" class="cls_011"><span class="cls_011">Daily Internet</span></div>
+<div style="position:absolute;left:755.06px;top:62.30px" class="cls_011"><span class="cls_011">Clicked on</span></div>
+<div style="position:absolute;left:238.19px;top:67.51px" class="cls_011"><span class="cls_011">Age</span></div>
+<div style="position:absolute;left:469.24px;top:67.51px" class="cls_011"><span class="cls_011">Ad Topic Line</span></div>
+<div style="position:absolute;left:568.87px;top:67.51px" class="cls_011"><span class="cls_011">City</span></div>
+<div style="position:absolute;left:594.93px;top:67.51px" class="cls_011"><span class="cls_011">Male</span></div>
+<div style="position:absolute;left:627.47px;top:67.51px" class="cls_011"><span class="cls_011">Country</span></div>
+<div style="position:absolute;left:693.65px;top:67.51px" class="cls_011"><span class="cls_011">Timestamp</span></div>
+<div style="position:absolute;left:212.61px;top:72.73px" class="cls_011"><span class="cls_011">Site</span></div>
+<div style="position:absolute;left:278.90px;top:72.73px" class="cls_011"><span class="cls_011">Income</span></div>
+<div style="position:absolute;left:366.77px;top:72.73px" class="cls_011"><span class="cls_011">Usage</span></div>
+<div style="position:absolute;left:788.34px;top:72.73px" class="cls_011"><span class="cls_011">Ad</span></div>
+<div style="position:absolute;left:442.19px;top:92.84px" class="cls_011"><span class="cls_011">Cloned 5thgeneration</span></div>
+<div style="position:absolute;left:694.95px;top:92.84px" class="cls_011"><span class="cls_011">2016-03-27</span></div>
+<div style="position:absolute;left:124.97px;top:98.05px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:206.64px;top:98.05px" class="cls_011"><span class="cls_011">68.95</span></div>
+<div style="position:absolute;left:245.13px;top:98.05px" class="cls_011"><span class="cls_011">35</span></div>
+<div style="position:absolute;left:272.90px;top:98.05px" class="cls_011"><span class="cls_011">61833.90</span></div>
+<div style="position:absolute;left:366.26px;top:98.05px" class="cls_011"><span class="cls_011">256.09</span></div>
+<div style="position:absolute;left:537.23px;top:98.05px" class="cls_011"><span class="cls_011">Wrightburgh</span></div>
+<div style="position:absolute;left:609.83px;top:98.05px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:633.24px;top:98.05px" class="cls_011"><span class="cls_011">Tunisia</span></div>
+<div style="position:absolute;left:795.28px;top:98.05px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:476.00px;top:103.26px" class="cls_011"><span class="cls_011">orchestration</span></div>
+<div style="position:absolute;left:706.54px;top:103.26px" class="cls_011"><span class="cls_011">00:53:11</span></div>
+<div style="position:absolute;left:454.13px;top:122.63px" class="cls_011"><span class="cls_011">Monitored national</span></div>
+<div style="position:absolute;left:694.95px;top:122.63px" class="cls_011"><span class="cls_011">2016-04-04</span></div>
+<div style="position:absolute;left:124.97px;top:127.84px" class="cls_011"><span class="cls_011">1</span></div>
+<div style="position:absolute;left:206.64px;top:127.84px" class="cls_011"><span class="cls_011">80.23</span></div>
+<div style="position:absolute;left:245.13px;top:127.84px" class="cls_011"><span class="cls_011">31</span></div>
+<div style="position:absolute;left:272.90px;top:127.84px" class="cls_011"><span class="cls_011">68441.85</span></div>
+<div style="position:absolute;left:366.26px;top:127.84px" class="cls_011"><span class="cls_011">193.77</span></div>
+<div style="position:absolute;left:546.68px;top:127.84px" class="cls_011"><span class="cls_011">West Jodi</span></div>
+<div style="position:absolute;left:609.83px;top:127.84px" class="cls_011"><span class="cls_011">1</span></div>
+<div style="position:absolute;left:637.38px;top:127.84px" class="cls_011"><span class="cls_011">Nauru</span></div>
+<div style="position:absolute;left:795.28px;top:127.84px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:467.05px;top:133.05px" class="cls_011"><span class="cls_011">standardization</span></div>
+<div style="position:absolute;left:705.88px;top:133.05px" class="cls_011"><span class="cls_011">01:39:02</span></div>
+<div style="position:absolute;left:415.90px;top:152.42px" class="cls_011"><span class="cls_011">Organic bottom-line service-</span></div>
+<div style="position:absolute;left:645.82px;top:152.42px" class="cls_011"><span class="cls_011">San</span></div>
+<div style="position:absolute;left:694.95px;top:152.42px" class="cls_011"><span class="cls_011">2016-03-13</span></div>
+<div style="position:absolute;left:124.97px;top:157.63px" class="cls_011"><span class="cls_011">2</span></div>
+<div style="position:absolute;left:206.64px;top:157.63px" class="cls_011"><span class="cls_011">69.47</span></div>
+<div style="position:absolute;left:245.13px;top:157.63px" class="cls_011"><span class="cls_011">26</span></div>
+<div style="position:absolute;left:272.90px;top:157.63px" class="cls_011"><span class="cls_011">59785.94</span></div>
+<div style="position:absolute;left:366.26px;top:157.63px" class="cls_011"><span class="cls_011">236.50</span></div>
+<div style="position:absolute;left:550.48px;top:157.63px" class="cls_011"><span class="cls_011">Davidton</span></div>
+<div style="position:absolute;left:609.83px;top:157.63px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:795.28px;top:157.63px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:508.78px;top:162.85px" class="cls_011"><span class="cls_011">desk</span></div>
+<div style="position:absolute;left:634.40px;top:162.85px" class="cls_011"><span class="cls_011">Marino</span></div>
+<div style="position:absolute;left:705.88px;top:162.85px" class="cls_011"><span class="cls_011">20:35:42</span></div>
+<div style="position:absolute;left:406.46px;top:182.21px" class="cls_011"><span class="cls_011">Triple-buffered reciprocal time-</span></div>
+<div style="position:absolute;left:565.56px;top:182.21px" class="cls_011"><span class="cls_011">West</span></div>
+<div style="position:absolute;left:694.95px;top:182.21px" class="cls_011"><span class="cls_011">2016-01-10</span></div>
+<div style="position:absolute;left:124.97px;top:187.42px" class="cls_011"><span class="cls_011">3</span></div>
+<div style="position:absolute;left:206.64px;top:187.42px" class="cls_011"><span class="cls_011">74.15</span></div>
+<div style="position:absolute;left:245.13px;top:187.42px" class="cls_011"><span class="cls_011">29</span></div>
+<div style="position:absolute;left:272.90px;top:187.42px" class="cls_011"><span class="cls_011">54806.18</span></div>
+<div style="position:absolute;left:366.26px;top:187.42px" class="cls_011"><span class="cls_011">245.89</span></div>
+<div style="position:absolute;left:609.83px;top:187.42px" class="cls_011"><span class="cls_011">1</span></div>
+<div style="position:absolute;left:645.33px;top:187.42px" class="cls_011"><span class="cls_011">Italy</span></div>
+<div style="position:absolute;left:795.28px;top:187.42px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:504.81px;top:192.64px" class="cls_011"><span class="cls_011">frame</span></div>
+<div style="position:absolute;left:555.47px;top:192.64px" class="cls_011"><span class="cls_011">Terrifurt</span></div>
+<div style="position:absolute;left:705.88px;top:192.64px" class="cls_011"><span class="cls_011">02:31:19</span></div>
+<div style="position:absolute;left:562.39px;top:212.00px" class="cls_011"><span class="cls_011">South</span></div>
+<div style="position:absolute;left:694.95px;top:212.00px" class="cls_011"><span class="cls_011">2016-06-03</span></div>
+<div style="position:absolute;left:124.97px;top:217.21px" class="cls_011"><span class="cls_011">4</span></div>
+<div style="position:absolute;left:206.64px;top:217.21px" class="cls_011"><span class="cls_011">68.37</span></div>
+<div style="position:absolute;left:245.13px;top:217.21px" class="cls_011"><span class="cls_011">35</span></div>
+<div style="position:absolute;left:272.90px;top:217.21px" class="cls_011"><span class="cls_011">73889.99</span></div>
+<div style="position:absolute;left:366.26px;top:217.21px" class="cls_011"><span class="cls_011">225.58</span></div>
+<div style="position:absolute;left:422.84px;top:217.21px" class="cls_011"><span class="cls_011">Robust logistical utilization</span></div>
+<div style="position:absolute;left:609.83px;top:217.21px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:632.90px;top:217.21px" class="cls_011"><span class="cls_011">Iceland</span></div>
+<div style="position:absolute;left:795.28px;top:217.21px" class="cls_011"><span class="cls_011">0</span></div>
+<div style="position:absolute;left:556.45px;top:222.43px" class="cls_011"><span class="cls_011">Manuel</span></div>
+<div style="position:absolute;left:705.88px;top:222.43px" class="cls_011"><span class="cls_011">03:36:18</span></div>
+<div style="position:absolute;left:120.26px;top:286.48px" class="cls_003"><span class="cls_003">** Use info and describe() on ad_data**</span></div>
+<div style="position:absolute;left:66.08px;top:317.76px" class="cls_005"><span class="cls_005">In [41]:</span></div>
+<div style="position:absolute;left:125.55px;top:317.76px" class="cls_007"><span class="cls_007">d d t  i f ()</span></div>
+<div style="position:absolute;left:120.26px;top:339.36px" class="cls_007"><span class="cls_007">&lt;class 'pandas.core.frame.DataFrame'></span></div>
+<div style="position:absolute;left:120.26px;top:352.02px" class="cls_007"><span class="cls_007">RangeIndex: 1000 entries, 0 to 999</span></div>
+<div style="position:absolute;left:120.26px;top:364.68px" class="cls_007"><span class="cls_007">Data columns (total 10 columns):</span></div>
+<div style="position:absolute;left:120.26px;top:377.34px" class="cls_007"><span class="cls_007">Daily Time Spent on Site</span></div>
+<div style="position:absolute;left:280.78px;top:377.34px" class="cls_007"><span class="cls_007">1000 non-null float64</span></div>
+<div style="position:absolute;left:120.26px;top:390.00px" class="cls_007"><span class="cls_007">Age</span></div>
+<div style="position:absolute;left:280.78px;top:390.00px" class="cls_007"><span class="cls_007">1000 non-null int64</span></div>
+<div style="position:absolute;left:120.26px;top:402.67px" class="cls_007"><span class="cls_007">Area Income</span></div>
+<div style="position:absolute;left:280.78px;top:402.67px" class="cls_007"><span class="cls_007">1000 non-null float64</span></div>
+<div style="position:absolute;left:120.26px;top:415.33px" class="cls_007"><span class="cls_007">Daily Internet Usage</span></div>
+<div style="position:absolute;left:280.78px;top:415.33px" class="cls_007"><span class="cls_007">1000 non-null float64</span></div>
+<div style="position:absolute;left:120.26px;top:427.99px" class="cls_007"><span class="cls_007">Ad Topic Line</span></div>
+<div style="position:absolute;left:280.78px;top:427.99px" class="cls_007"><span class="cls_007">1000 non-null object</span></div>
+<div style="position:absolute;left:120.26px;top:440.65px" class="cls_007"><span class="cls_007">City</span></div>
+<div style="position:absolute;left:280.78px;top:440.65px" class="cls_007"><span class="cls_007">1000 non-null object</span></div>
+<div style="position:absolute;left:120.26px;top:453.31px" class="cls_007"><span class="cls_007">Male</span></div>
+<div style="position:absolute;left:280.78px;top:453.31px" class="cls_007"><span class="cls_007">1000 non-null int64</span></div>
+<div style="position:absolute;left:120.26px;top:465.97px" class="cls_007"><span class="cls_007">Country</span></div>
+<div style="position:absolute;left:280.78px;top:465.97px" class="cls_007"><span class="cls_007">1000 non-null object</span></div>
+<div style="position:absolute;left:120.26px;top:478.63px" class="cls_007"><span class="cls_007">Timestamp</span></div>
+<div style="position:absolute;left:280.78px;top:478.63px" class="cls_007"><span class="cls_007">1000 non-null object</span></div>
+<div style="position:absolute;left:120.26px;top:491.29px" class="cls_007"><span class="cls_007">Clicked on Ad</span></div>
+<div style="position:absolute;left:280.78px;top:491.29px" class="cls_007"><span class="cls_007">1000 non-null int64</span></div>
+<div style="position:absolute;left:120.26px;top:503.96px" class="cls_007"><span class="cls_007">dtypes: float64(3), int64(3), object(4)</span></div>
+<div style="position:absolute;left:120.26px;top:516.62px" class="cls_007"><span class="cls_007">memory usage: 78.2+ KB</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">2/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:1208px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background03.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [42]:</span></div>
+<div style="position:absolute;left:125.55px;top:36.98px" class="cls_007"><span class="cls_007">d d t  d</span></div>
+<div style="position:absolute;left:194.33px;top:36.98px" class="cls_007"><span class="cls_007">ib ()</span></div>
+<div style="position:absolute;left:66.06px;top:57.83px" class="cls_010"><span class="cls_010">Out[42]:</span></div>
+<div style="position:absolute;left:158.39px;top:62.30px" class="cls_011"><span class="cls_011">Daily Time Spent on Site</span></div>
+<div style="position:absolute;left:307.46px;top:62.30px" class="cls_011"><span class="cls_011">Age   Area Income   Daily Internet Usage</span></div>
+<div style="position:absolute;left:527.90px;top:62.30px" class="cls_011"><span class="cls_011">Male   Clicked on Ad</span></div>
+<div style="position:absolute;left:124.98px;top:82.41px" class="cls_011"><span class="cls_011">count</span></div>
+<div style="position:absolute;left:210.33px;top:82.41px" class="cls_011"><span class="cls_011">1000.000000</span></div>
+<div style="position:absolute;left:272.15px;top:82.41px" class="cls_011"><span class="cls_011">1000.000000</span></div>
+<div style="position:absolute;left:338.43px;top:82.41px" class="cls_011"><span class="cls_011">1000.000000</span></div>
+<div style="position:absolute;left:433.77px;top:82.41px" class="cls_011"><span class="cls_011">1000.000000</span></div>
+<div style="position:absolute;left:495.58px;top:82.41px" class="cls_011"><span class="cls_011">1000.000000</span></div>
+<div style="position:absolute;left:569.82px;top:82.41px" class="cls_011"><span class="cls_011">1000.00000</span></div>
+<div style="position:absolute;left:125.96px;top:101.77px" class="cls_011"><span class="cls_011">mean</span></div>
+<div style="position:absolute;left:220.27px;top:101.77px" class="cls_011"><span class="cls_011">65.000200</span></div>
+<div style="position:absolute;left:282.09px;top:101.77px" class="cls_011"><span class="cls_011">36.009000</span></div>
+<div style="position:absolute;left:333.46px;top:101.77px" class="cls_011"><span class="cls_011">55000.000080</span></div>
+<div style="position:absolute;left:438.73px;top:101.77px" class="cls_011"><span class="cls_011">180.000100</span></div>
+<div style="position:absolute;left:510.49px;top:101.77px" class="cls_011"><span class="cls_011">0.481000</span></div>
+<div style="position:absolute;left:584.72px;top:101.77px" class="cls_011"><span class="cls_011">0.50000</span></div>
+<div style="position:absolute;left:135.90px;top:121.14px" class="cls_011"><span class="cls_011">std</span></div>
+<div style="position:absolute;left:220.27px;top:121.14px" class="cls_011"><span class="cls_011">15.853615</span></div>
+<div style="position:absolute;left:287.06px;top:121.14px" class="cls_011"><span class="cls_011">8.785562</span></div>
+<div style="position:absolute;left:333.46px;top:121.14px" class="cls_011"><span class="cls_011">13414.634022</span></div>
+<div style="position:absolute;left:443.70px;top:121.14px" class="cls_011"><span class="cls_011">43.902339</span></div>
+<div style="position:absolute;left:510.49px;top:121.14px" class="cls_011"><span class="cls_011">0.499889</span></div>
+<div style="position:absolute;left:584.72px;top:121.14px" class="cls_011"><span class="cls_011">0.50025</span></div>
+<div style="position:absolute;left:133.42px;top:140.50px" class="cls_011"><span class="cls_011">min</span></div>
+<div style="position:absolute;left:220.27px;top:140.50px" class="cls_011"><span class="cls_011">32.600000</span></div>
+<div style="position:absolute;left:282.09px;top:140.50px" class="cls_011"><span class="cls_011">19.000000</span></div>
+<div style="position:absolute;left:333.46px;top:140.50px" class="cls_011"><span class="cls_011">13996.500000</span></div>
+<div style="position:absolute;left:438.73px;top:140.50px" class="cls_011"><span class="cls_011">104.780000</span></div>
+<div style="position:absolute;left:510.49px;top:140.50px" class="cls_011"><span class="cls_011">0.000000</span></div>
+<div style="position:absolute;left:584.72px;top:140.50px" class="cls_011"><span class="cls_011">0.00000</span></div>
+<div style="position:absolute;left:131.42px;top:159.87px" class="cls_011"><span class="cls_011">25%</span></div>
+<div style="position:absolute;left:220.27px;top:159.87px" class="cls_011"><span class="cls_011">51.360000</span></div>
+<div style="position:absolute;left:282.09px;top:159.87px" class="cls_011"><span class="cls_011">29.000000</span></div>
+<div style="position:absolute;left:333.46px;top:159.87px" class="cls_011"><span class="cls_011">47031.802500</span></div>
+<div style="position:absolute;left:438.73px;top:159.87px" class="cls_011"><span class="cls_011">138.830000</span></div>
+<div style="position:absolute;left:510.49px;top:159.87px" class="cls_011"><span class="cls_011">0.000000</span></div>
+<div style="position:absolute;left:584.72px;top:159.87px" class="cls_011"><span class="cls_011">0.00000</span></div>
+<div style="position:absolute;left:131.42px;top:179.23px" class="cls_011"><span class="cls_011">50%</span></div>
+<div style="position:absolute;left:220.27px;top:179.23px" class="cls_011"><span class="cls_011">68.215000</span></div>
+<div style="position:absolute;left:282.09px;top:179.23px" class="cls_011"><span class="cls_011">35.000000</span></div>
+<div style="position:absolute;left:333.46px;top:179.23px" class="cls_011"><span class="cls_011">57012.300000</span></div>
+<div style="position:absolute;left:438.73px;top:179.23px" class="cls_011"><span class="cls_011">183.130000</span></div>
+<div style="position:absolute;left:510.49px;top:179.23px" class="cls_011"><span class="cls_011">0.000000</span></div>
+<div style="position:absolute;left:584.72px;top:179.23px" class="cls_011"><span class="cls_011">0.50000</span></div>
+<div style="position:absolute;left:131.42px;top:198.60px" class="cls_011"><span class="cls_011">75%</span></div>
+<div style="position:absolute;left:220.27px;top:198.60px" class="cls_011"><span class="cls_011">78.547500</span></div>
+<div style="position:absolute;left:282.09px;top:198.60px" class="cls_011"><span class="cls_011">42.000000</span></div>
+<div style="position:absolute;left:333.46px;top:198.60px" class="cls_011"><span class="cls_011">65470.635000</span></div>
+<div style="position:absolute;left:438.73px;top:198.60px" class="cls_011"><span class="cls_011">218.792500</span></div>
+<div style="position:absolute;left:510.49px;top:198.60px" class="cls_011"><span class="cls_011">1.000000</span></div>
+<div style="position:absolute;left:584.72px;top:198.60px" class="cls_011"><span class="cls_011">1.00000</span></div>
+<div style="position:absolute;left:131.42px;top:217.96px" class="cls_011"><span class="cls_011">max</span></div>
+<div style="position:absolute;left:220.27px;top:217.96px" class="cls_011"><span class="cls_011">91.430000</span></div>
+<div style="position:absolute;left:282.09px;top:217.96px" class="cls_011"><span class="cls_011">61.000000</span></div>
+<div style="position:absolute;left:333.46px;top:217.96px" class="cls_011"><span class="cls_011">79484.800000</span></div>
+<div style="position:absolute;left:438.73px;top:217.96px" class="cls_011"><span class="cls_011">269.960000</span></div>
+<div style="position:absolute;left:510.49px;top:217.96px" class="cls_011"><span class="cls_011">1.000000</span></div>
+<div style="position:absolute;left:584.72px;top:217.96px" class="cls_011"><span class="cls_011">1.00000</span></div>
+<div style="position:absolute;left:120.26px;top:278.29px" class="cls_004"><span class="cls_004">Exploratory Data Analysis</span></div>
+<div style="position:absolute;left:120.26px;top:306.59px" class="cls_003"><span class="cls_003">Let's use seaborn to explore the data!</span></div>
+<div style="position:absolute;left:120.26px;top:328.93px" class="cls_003"><span class="cls_003">Try recreating the plots shown below!</span></div>
+<div style="position:absolute;left:120.26px;top:351.28px" class="cls_003"><span class="cls_003">** Create a histogram of the Age**</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">3/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:1812px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background04.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [48]:</span></div>
+<div style="position:absolute;left:119.82px;top:36.98px" class="cls_007"><span class="cls_007">sns.set_style(</span><span class="cls_009">'whitegrid'</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:119.82px;top:49.64px" class="cls_007"><span class="cls_007">ad_data[</span><span class="cls_009">'Age'</span><span class="cls_007">].hist(bins</span><span class="cls_008">=</span><span class="cls_012">30</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:125.55px;top:62.30px" class="cls_007"><span class="cls_007">lt   l b l(</span><span class="cls_009">'A   '</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:66.06px;top:71.24px" class="cls_010"><span class="cls_010">Out[48]:</span></div>
+<div style="position:absolute;left:120.26px;top:71.98px" class="cls_007"><span class="cls_007">&lt;matplotlib.text.Text at 0x11a05b908></span></div>
+<div style="position:absolute;left:120.26px;top:500.23px" class="cls_003"><span class="cls_003">Create a jointplot showing Area Income versus Age.</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">4/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:2416px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background05.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [64]:</span></div>
+<div style="position:absolute;left:142.73px;top:36.98px" class="cls_007"><span class="cls_007">j i t l t(</span><span class="cls_009">  'A  '   'A</span></div>
+<div style="position:absolute;left:291.73px;top:36.98px" class="cls_009"><span class="cls_009">I</span></div>
+<div style="position:absolute;left:326.13px;top:36.98px" class="cls_009"><span class="cls_009">'</span><span class="cls_007"> d t   d d t )</span></div>
+<div style="position:absolute;left:66.06px;top:57.83px" class="cls_010"><span class="cls_010">Out[64]:</span></div>
+<div style="position:absolute;left:120.26px;top:58.58px" class="cls_007"><span class="cls_007">&lt;seaborn.axisgrid.JointGrid at 0x120bbb390></span></div>
+<div style="position:absolute;left:120.26px;top:451.08px" class="cls_003"><span class="cls_003">Create a jointplot showing the kde distributions of Daily Time spent on site vs. Age.</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">5/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:3020px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background06.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [66]:</span></div>
+<div style="position:absolute;left:142.73px;top:36.98px" class="cls_007"><span class="cls_007">j i t l t(</span><span class="cls_009">  'A  '   'D il  Ti   S   t</span></div>
+<div style="position:absolute;left:377.72px;top:36.98px" class="cls_009"><span class="cls_009">Sit '</span><span class="cls_007"> d t    d d t</span></div>
+<div style="position:absolute;left:498.08px;top:36.98px" class="cls_007"><span class="cls_007">l</span><span class="cls_009">   '  d'</span><span class="cls_007"> ki d</span><span class="cls_009"> 'kd '</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:120.26px;top:477.14px" class="cls_003"><span class="cls_003">** Create a jointplot of 'Daily Time Spent on Site' vs. 'Daily Internet Usage'**</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">6/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:3624px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background07.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [72]:</span></div>
+<div style="position:absolute;left:142.73px;top:36.98px" class="cls_007"><span class="cls_007">j i t l t(</span><span class="cls_009">  'D il  Ti   S   t</span></div>
+<div style="position:absolute;left:331.88px;top:36.98px" class="cls_009"><span class="cls_009">Sit '    'D il   I t</span></div>
+<div style="position:absolute;left:457.98px;top:36.98px" class="cls_009"><span class="cls_009">t U</span></div>
+<div style="position:absolute;left:498.11px;top:36.98px" class="cls_009"><span class="cls_009">'</span><span class="cls_007"> d t   d d t</span></div>
+<div style="position:absolute;left:595.53px;top:36.98px" class="cls_007"><span class="cls_007">l</span><span class="cls_009">   '</span></div>
+<div style="position:absolute;left:652.84px;top:36.98px" class="cls_009"><span class="cls_009">'</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:66.06px;top:57.83px" class="cls_010"><span class="cls_010">Out[72]:</span></div>
+<div style="position:absolute;left:120.26px;top:58.58px" class="cls_007"><span class="cls_007">&lt;seaborn.axisgrid.JointGrid at 0x121e8cb00></span></div>
+<div style="position:absolute;left:120.26px;top:474.16px" class="cls_003"><span class="cls_003">** Finally, create a pairplot with the hue defined by the 'Clicked on Ad' column feature.**</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">7/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:4228px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background08.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:66.08px;top:36.98px" class="cls_005"><span class="cls_005">In [84]:</span></div>
+<div style="position:absolute;left:154.20px;top:36.98px" class="cls_007"><span class="cls_007">i  l t( d d t  h</span><span class="cls_009">   'Cli k d</span></div>
+<div style="position:absolute;left:331.88px;top:36.98px" class="cls_009"><span class="cls_009">Ad'</span><span class="cls_007">    l tt</span><span class="cls_009">   'b   '</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:66.06px;top:57.83px" class="cls_010"><span class="cls_010">Out[84]:</span></div>
+<div style="position:absolute;left:120.26px;top:58.58px" class="cls_007"><span class="cls_007">&lt;seaborn.axisgrid.PairGrid at 0x12a97fdd8></span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">8/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:4832px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background09.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:120.26px;top:203.07px" class="cls_013"><span class="cls_013">Logistic Regression</span></div>
+<div style="position:absolute;left:120.26px;top:235.09px" class="cls_003"><span class="cls_003">Now it's time to do a train test split, and train our model!</span></div>
+<div style="position:absolute;left:120.26px;top:257.43px" class="cls_003"><span class="cls_003">You'll have the freedom here to choose columns that you want to train on!</span></div>
+<div style="position:absolute;left:120.26px;top:288.71px" class="cls_003"><span class="cls_003">** Split the data into training set and testing set using train_test_split**</span></div>
+<div style="position:absolute;left:66.08px;top:319.99px" class="cls_005"><span class="cls_005">In [85]:</span></div>
+<div style="position:absolute;left:119.82px;top:319.99px" class="cls_006"><span class="cls_006">from</span><span class="cls_007">   kl</span></div>
+<div style="position:absolute;left:205.78px;top:319.99px" class="cls_007"><span class="cls_007">d l   l  ti</span><span class="cls_006">   import</span><span class="cls_007"> t  i  t  t   lit</span></div>
+<div style="position:absolute;left:66.08px;top:350.53px" class="cls_005"><span class="cls_005">In [88]:</span></div>
+<div style="position:absolute;left:119.82px;top:350.53px" class="cls_007"><span class="cls_007">X </span><span class="cls_008">=</span><span class="cls_007"> ad_data[[</span><span class="cls_009">'Daily Time Spent on Site'</span><span class="cls_007">, </span><span class="cls_009">'Age'</span><span class="cls_007">, </span><span class="cls_009">'Area Income'</span><span class="cls_007">,</span><span class="cls_009">'Daily Internet Usage'</span><span class="cls_007">, </span><span class="cls_009">'Male'</span><span class="cls_007">]]</span></div>
+<div style="position:absolute;left:148.45px;top:363.19px" class="cls_007"><span class="cls_007">d d t [</span><span class="cls_009">'Cli k d</span></div>
+<div style="position:absolute;left:257.36px;top:363.19px" class="cls_009"><span class="cls_009">Ad'</span><span class="cls_007">]</span></div>
+<div style="position:absolute;left:66.08px;top:381.81px" class="cls_005"><span class="cls_005">In [89]:</span></div>
+<div style="position:absolute;left:119.82px;top:381.81px" class="cls_007"><span class="cls_007">X t</span></div>
+<div style="position:absolute;left:148.48px;top:381.81px" class="cls_007"><span class="cls_007">i   X t  t</span></div>
+<div style="position:absolute;left:228.72px;top:381.81px" class="cls_007"><span class="cls_007">t  i</span></div>
+<div style="position:absolute;left:280.31px;top:381.81px" class="cls_007"><span class="cls_007">t  t   t  i  t  t   lit(X</span></div>
+<div style="position:absolute;left:452.23px;top:381.81px" class="cls_007"><span class="cls_007">t  t  i</span></div>
+<div style="position:absolute;left:509.55px;top:381.81px" class="cls_012"><span class="cls_012">0 33</span></div>
+<div style="position:absolute;left:561.13px;top:381.81px" class="cls_007"><span class="cls_007">d</span></div>
+<div style="position:absolute;left:589.80px;top:381.81px" class="cls_007"><span class="cls_007">t t</span></div>
+<div style="position:absolute;left:618.45px;top:381.81px" class="cls_012"><span class="cls_012">42</span><span class="cls_007">)</span></div>
+<div style="position:absolute;left:120.26px;top:413.09px" class="cls_003"><span class="cls_003">** Train and fit a logistic regression model on the training set.**</span></div>
+<div style="position:absolute;left:66.08px;top:444.37px" class="cls_005"><span class="cls_005">In [91]:</span></div>
+<div style="position:absolute;left:119.82px;top:444.37px" class="cls_006"><span class="cls_006">f</span></div>
+<div style="position:absolute;left:154.20px;top:444.37px" class="cls_007"><span class="cls_007">kl</span></div>
+<div style="position:absolute;left:194.32px;top:444.37px" class="cls_007"><span class="cls_007">li</span></div>
+<div style="position:absolute;left:245.91px;top:444.37px" class="cls_007"><span class="cls_007">d l</span><span class="cls_006"> i</span></div>
+<div style="position:absolute;left:297.50px;top:444.37px" class="cls_006"><span class="cls_006">t</span><span class="cls_007"> L  i ti R</span></div>
+<div style="position:absolute;left:394.94px;top:444.37px" class="cls_007"><span class="cls_007">i</span></div>
+<div style="position:absolute;left:66.08px;top:474.91px" class="cls_005"><span class="cls_005">In [92]:</span></div>
+<div style="position:absolute;left:119.82px;top:474.91px" class="cls_007"><span class="cls_007">logmodel </span><span class="cls_008">=</span><span class="cls_007"> LogisticRegression()</span></div>
+<div style="position:absolute;left:119.82px;top:487.57px" class="cls_007"><span class="cls_007">l</span></div>
+<div style="position:absolute;left:148.48px;top:487.57px" class="cls_007"><span class="cls_007">d l fit(X t  i</span></div>
+<div style="position:absolute;left:251.63px;top:487.57px" class="cls_007"><span class="cls_007">t  i )</span></div>
+<div style="position:absolute;left:66.06px;top:496.51px" class="cls_010"><span class="cls_010">Out[92]:</span><span class="cls_007">  LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,</span></div>
+<div style="position:absolute;left:177.59px;top:509.91px" class="cls_007"><span class="cls_007">intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,</span></div>
+<div style="position:absolute;left:177.59px;top:522.58px" class="cls_007"><span class="cls_007">penalty='l2', random_state=None, solver='liblinear', tol=0.0001,</span></div>
+<div style="position:absolute;left:177.59px;top:535.24px" class="cls_007"><span class="cls_007">verbose=0, warm_start=False)</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:799.95px;top:569.04px" class="cls_002"><span class="cls_002">9/10</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-420px;top:5436px;width:841px;height:594px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="09201a50-b575-11ea-8b25-0cc47a792c0a_id_09201a50-b575-11ea-8b25-0cc47a792c0a_files/background10.jpg" width=841 height=594></div>
+<div style="position:absolute;left:26.45px;top:13.04px" class="cls_002"><span class="cls_002">6/23/2020</span></div>
+<div style="position:absolute;left:344.73px;top:13.04px" class="cls_002"><span class="cls_002">03-Logistic Regression Project - Solutions - Jupyter Notebook</span></div>
+<div style="position:absolute;left:120.26px;top:36.24px" class="cls_004"><span class="cls_004">Predictions and Evaluations</span></div>
+<div style="position:absolute;left:120.26px;top:64.53px" class="cls_003"><span class="cls_003">** Now predict values for the testing data.**</span></div>
+<div style="position:absolute;left:66.08px;top:95.82px" class="cls_005"><span class="cls_005">In [94]:</span></div>
+<div style="position:absolute;left:137.02px;top:95.82px" class="cls_007"><span class="cls_007">di ti</span></div>
+<div style="position:absolute;left:200.04px;top:95.82px" class="cls_007"><span class="cls_007">l</span></div>
+<div style="position:absolute;left:228.71px;top:95.82px" class="cls_007"><span class="cls_007">d l</span></div>
+<div style="position:absolute;left:268.83px;top:95.82px" class="cls_007"><span class="cls_007">di t(X t   t)</span></div>
+<div style="position:absolute;left:120.26px;top:127.10px" class="cls_003"><span class="cls_003">** Create a classification report for the model.**</span></div>
+<div style="position:absolute;left:66.08px;top:157.63px" class="cls_005"><span class="cls_005">In [95]:</span></div>
+<div style="position:absolute;left:119.82px;top:157.63px" class="cls_006"><span class="cls_006">from</span><span class="cls_007">   kl</span></div>
+<div style="position:absolute;left:205.78px;top:157.63px" class="cls_007"><span class="cls_007">t i</span><span class="cls_006">   import</span><span class="cls_007">  l   ifi  ti</span></div>
+<div style="position:absolute;left:394.94px;top:157.63px" class="cls_007"><span class="cls_007">t</span></div>
+<div style="position:absolute;left:66.08px;top:188.17px" class="cls_005"><span class="cls_005">In [96]:</span></div>
+<div style="position:absolute;left:131.28px;top:188.17px" class="cls_006"><span class="cls_006">i t</span><span class="cls_007">( l    ifi   ti</span></div>
+<div style="position:absolute;left:268.86px;top:188.17px" class="cls_007"><span class="cls_007">t(   t   t</span></div>
+<div style="position:absolute;left:337.63px;top:188.17px" class="cls_007"><span class="cls_007">di ti</span></div>
+<div style="position:absolute;left:383.48px;top:188.17px" class="cls_007"><span class="cls_007">))</span></div>
+<div style="position:absolute;left:194.79px;top:210.51px" class="cls_007"><span class="cls_007">precision</span></div>
+<div style="position:absolute;left:269.31px;top:210.51px" class="cls_007"><span class="cls_007">recall  f1-score   support</span></div>
+<div style="position:absolute;left:177.59px;top:235.83px" class="cls_007"><span class="cls_007">0</span></div>
+<div style="position:absolute;left:223.45px;top:235.83px" class="cls_007"><span class="cls_007">0.87</span></div>
+<div style="position:absolute;left:280.78px;top:235.83px" class="cls_007"><span class="cls_007">0.96</span></div>
+<div style="position:absolute;left:338.10px;top:235.83px" class="cls_007"><span class="cls_007">0.91</span></div>
+<div style="position:absolute;left:401.17px;top:235.83px" class="cls_007"><span class="cls_007">162</span></div>
+<div style="position:absolute;left:177.59px;top:248.50px" class="cls_007"><span class="cls_007">1</span></div>
+<div style="position:absolute;left:223.45px;top:248.50px" class="cls_007"><span class="cls_007">0.96</span></div>
+<div style="position:absolute;left:280.78px;top:248.50px" class="cls_007"><span class="cls_007">0.86</span></div>
+<div style="position:absolute;left:338.10px;top:248.50px" class="cls_007"><span class="cls_007">0.91</span></div>
+<div style="position:absolute;left:401.17px;top:248.50px" class="cls_007"><span class="cls_007">168</span></div>
+<div style="position:absolute;left:120.26px;top:273.82px" class="cls_007"><span class="cls_007">avg / total</span></div>
+<div style="position:absolute;left:223.45px;top:273.82px" class="cls_007"><span class="cls_007">0.91</span></div>
+<div style="position:absolute;left:280.78px;top:273.82px" class="cls_007"><span class="cls_007">0.91</span></div>
+<div style="position:absolute;left:338.10px;top:273.82px" class="cls_007"><span class="cls_007">0.91</span></div>
+<div style="position:absolute;left:401.17px;top:273.82px" class="cls_007"><span class="cls_007">330</span></div>
+<div style="position:absolute;left:26.45px;top:569.04px" class="cls_002"><span class="cls_002">localhost:8888/notebooks/original (1)/Refactored_Py_DS_ML_Bootcamp-master.txt/13-Logistic-Regression/03-Logistic Regression Project - Solutions.ipynb</span></div>
+<div style="position:absolute;left:795.50px;top:569.04px" class="cls_002"><span class="cls_002">10/10</span></div>
+</div>
+
+</body>
+</html>
