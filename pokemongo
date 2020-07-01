@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pokemon information</title>
+</head>
+     <style>
+     	    #change
+     	    {
+     	    	width:100px;
+     	    }
+     	    table
+     	    {
+     	    	border:5px solid yellow;
+     	    }
+     	    body
+     	    {
+     	    	background-color:aqua;
+     	    }
+     	    h1
+     	    {
+     	    	border:5px solid grey;
+     	    	border-radius:100px;
+     	    	background-color:orange;
+     	    	text-align:center;
+     	    }
+     </style>
+<body>
+	   <h1>First Generation Pokemon Chart</h1>
+	   <table border="1">
+	   	    <tr>
+	   	    	<th>Image</th>
+	   	    	<th>Name</th>
+	   	    	<th>Type</th>
+	   	    	<th>Evolves Into</th>
+	   	    </tr>
+	   	    <tr>
+	   	    	<td><img id="change" src="download.jpg"></td>
+	   	    	<td>Bulbasaur</td>
+	   	    	<td>Grass/poison</td>
+	   	    	<td><a href="https://www.pokemon.com/us/pokedex/bulbasaur">click here</a></td>
+	   	    </tr>
+	   	    <tr>
+	   	    	<td><img id="change" src="charmander.jpg"></td>
+	   	    	<td>charmander</td>
+	   	    	<td>Fire</td>
+	   	    	<td><a href="https://www.pokemon.com/us/pokedex/charmander">click here</a></td>
+	   	    </tr>
+	   	    <tr>
+	   	    	<td><img id="change" src="squirtle.jpg"></td>
+	   	    	<td>Squirtle</td>
+	   	    	<td>Water</td>
+	   	    	<td><a href="https://www.pokemon.com/us/pokedex/squirtle">click here</a></td>
+	   	    </tr>
+	   	  </table>
+
+
+
+</body>
+</html>
