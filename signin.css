@@ -1,0 +1,283 @@
+.sec-theme
+{
+
+width: 1390px;
+  height:1000px;
+
+  display: block;
+  background-color:#33f5f5;
+
+
+}
+
+
+
+
+
+.triangle-left {
+position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid #555;
+	border-bottom: 25px solid transparent;
+	opacity: 0.2;
+
+
+}
+
+.circle {
+position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+  opacity: 0.2;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#inside
+{
+
+position: absolute;
+ margin:100px;
+ margin-left:50px;
+width:1250px;
+height:670px;
+background-color:white;
+border: 2px solid red;
+border-radius: 30px;
+
+}
+#signup
+{
+position: absolute;
+ margin:0px;
+ margin-left:700px;
+width:550px;
+height:670px;
+background-color:#056608;
+border-right: 2px solid red;
+border-radius:0px 30px 30px 0px;
+opacity: 0.5;
+
+}
+#companyname
+{
+position: absolute;
+margin-left:30px;
+margin-top:20px;
+font-size:20px;
+color:green;
+}
+#signin
+{
+position: absolute;
+margin-left:220px;
+margin-top:70px;
+color:#228b22;
+}
+
+hr {
+position:absolute;
+  display: block;
+  margin-top: 120px;
+
+  margin-left: 300px;
+
+  border-style: inset;
+  border-width: 1px;
+
+}
+
+#google
+{
+position:absolute;
+ margin-top: 150px;
+
+  margin-left: 360px;
+
+  border-radius:50%;
+  width: 42px;
+  height:42px;
+}
+
+#linkedin
+{
+position:absolute;
+ margin-top: 150px;
+
+  margin-left: 310px;
+width: 42px;
+  height:42px;
+  border-radius: 50%;
+}
+
+#facebook
+{
+position:absolute;
+ margin-top: 150px;
+
+  margin-left: 260px;
+width: 42px;
+  height:42px;
+
+  border-radius: 50%;
+}
+
+p
+{
+position:absolute;
+ margin-top: 220px;
+
+  margin-left: 260px;
+
+}
+
+form
+{
+
+position:absolute;
+ margin-top: 290px;
+
+  margin-left: 205px;
+}
+
+#signinbutton
+{
+
+background-color: #4CAF50;
+
+  color: white;
+
+  text-align: center;
+  width:120px;
+  height:30px;
+  font-size: 16px;
+  margin-left:60px;
+  border-radius: 15px;
+}
+
+#last1
+{
+position:absolute;
+ margin-top: 590px;
+
+  margin-left: 180px;
+}
+
+#last2
+{
+position:absolute;
+ margin-top: 590px;
+
+  margin-left: 400px;
+}
+#dot
+{
+position:absolute;
+ margin-top: 585px;
+
+  margin-left: 337px;
+}
+
+
+
+#head
+{
+position:absolute;
+ margin-top: 230px;
+
+  margin-left: 160px;
+  color:white;
+  font-size:40px;
+}
+#line
+{
+position:absolute;
+ margin-top: 240px;
+
+  margin-left: 220px;
+
+}
+#para
+{
+position:absolute;
+ margin-top: 310px;
+
+  margin-left: 140px;
+  color:white;
+  font-size:20px;
+
+}
+
+#para1
+{
+position:absolute;
+ margin-top: 330px;
+
+  margin-left: 180px;
+  color:white;
+  font-size:20px;
+
+
+}
+
+
+#signupbutton
+{
+position:absolute;
+ margin-top: 390px;
+
+  margin-left: 190px;
+  background-color: #056608;
+
+  color: white;
+
+  text-align: center;
+  width:120px;
+  height:30px;
+  font-size: 16px;
+   border-radius: 15px;
+
+}
+
+#email
+{
+
+width:280px;
+height:30px;
+
+}
+#password
+{
+width:280px;
+height:30px;
+}
+
+
+
+
+
+
+
